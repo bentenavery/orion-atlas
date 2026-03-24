@@ -39,7 +39,7 @@ RESULTS_DIR   = EVAL_DIR / "results"
 
 DEFAULT_VAL_BIN   = REPO_ROOT / "data" / "val_v3.bin"
 DEFAULT_TOKENIZER = REPO_ROOT / "tokenizer" / "orion_tokenizer.model"
-DEFAULT_CKPT      = Path("C:/Users/avery/orion-lab/inference/checkpoints/orion_1B_best.pt")
+DEFAULT_CKPT      = Path(__file__).parent.parent / "checkpoints" / "orion_1B_best.pt"
 
 # Baseline perplexities for comparison (on WikiText-103 / PTB – noted where known)
 BASELINES = {
