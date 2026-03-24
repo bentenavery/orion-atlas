@@ -10,12 +10,13 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-sys.path.insert(0, "C:/Users/avery/orion-from-scratch")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, BASE_DIR)
 from model import OrionModel, OrionConfig, CONFIGS
 
-DATA_DIR = "C:/Users/avery/orion-from-scratch/data"
-CKPT_DIR = "C:/Users/avery/orion-from-scratch/checkpoints"
-LOG_DIR = "C:/Users/avery/orion-from-scratch/logs"
+DATA_DIR = os.path.join(BASE_DIR, "data")
+CKPT_DIR = os.path.join(BASE_DIR, "checkpoints")
+LOG_DIR = os.path.join(BASE_DIR, "logs")
 STATUS_FILE = os.path.join(LOG_DIR, "train_1B_status.json")
 
 os.makedirs(CKPT_DIR, exist_ok=True)
